@@ -1,0 +1,19 @@
+language: node_js
+cache:
+  directories:
+    - ~/.npm
+notifications:
+  email: false
+node_js:
+  - stable
+before_install:
+  - npm i -g npm@6.0.0 # This can be removed once Travis uses at least version 5.7.x
+install:
+  - npm ci # instead of default `npm install`
+script:
+  - npm test
+after_success:
+  - npm run semantic-release
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/

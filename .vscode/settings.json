@@ -1,0 +1,17 @@
+{
+  "eslint.options": {
+    "configFile": ".eslintrc",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    }
+  },
+  "eslint.enable": true,
+  "prettier.eslintIntegration": true,
+  "editor.renderWhitespace": "all",
+  "editor.trimAutoWhitespace": true,
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "prettier.stylelintIntegration": true,
+  "prettier.trailingComma": "all"
+}

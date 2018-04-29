@@ -1,8 +1,8 @@
 module.exports = {
   extends: [
+    'stylelint-config-prettier',
     'stylelint-config-standard',
     'stylelint-config-recommended',
-    'stylelint-config-prettier',
     'stylelint-config-recommended-scss',
     'stylelint-config-css-modules',
   ],
@@ -30,32 +30,8 @@ module.exports = {
         ignore: ['stylelint-commands', 'after-comment'],
       },
     ],
-    'plugin/selector-bem-pattern': {
-      componentName: '[A-Z]+',
-      componentSelectors: {
-        initial: '^\\.{componentName}(?:-[a-z]+)?$',
-        combined: '^\\.combined-{componentName}-[a-z]+$',
-      },
-      utilitySelectors: '^\\.util-[a-z]+$',
-    },
     'at-rule-blacklist': ['extend', 'debug'],
     'at-rule-no-vendor-prefix': true,
-    'at-rule-no-unknown': [
-      true,
-      {
-        ignoreAtRules: [
-          'include',
-          'each',
-          'mixin',
-          'return',
-          'if',
-          'function',
-          'for',
-          'warn',
-          'else',
-        ],
-      },
-    ],
     'max-nesting-depth': 3,
     'declaration-no-important': true,
     'no-duplicate-selectors': true,
@@ -96,29 +72,6 @@ module.exports = {
     'no-missing-end-of-source-newline': true,
     'number-leading-zero': 'always',
     'number-no-trailing-zeros': true,
-    'order/order': [
-      [
-        'custom-properties',
-        'dollar-variables',
-        {
-          type: 'at-rule',
-          name: 'extend',
-        },
-        {
-          type: 'at-rule',
-          name: 'include',
-          hasBlock: false,
-        },
-        'declarations',
-        {
-          type: 'at-rule',
-          name: 'include',
-          hasBlock: true,
-        },
-        'rules',
-      ],
-    ],
-    'order/properties-alphabetical-order': true,
     'property-no-unknown': true,
     'property-no-vendor-prefix': true,
     'rule-empty-line-before': [
@@ -128,16 +81,6 @@ module.exports = {
         except: ['first-nested'],
       },
     ],
-    'scss/at-extend-no-missing-placeholder': true,
-    'scss/at-function-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
-    'scss/at-import-no-partial-leading-underscore': true,
-    'scss/at-import-partial-extension-blacklist': ['scss'],
-    'scss/at-mixin-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
-    'scss/dollar-variable-colon-space-after': 'always',
-    'scss/dollar-variable-colon-space-before': 'never',
-    'scss/dollar-variable-pattern': '^[_]?[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
-    'scss/percent-placeholder-pattern': '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$',
-    'scss/selector-no-redundant-nesting-selector': true,
     'selector-class-pattern': [
       '^[a-z0-9\\-]+$',
       {

@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-pavo",
-  "version": "0.0.0-development",
+  "version": "1.0.0-development",
   "description": "Pavo stylelint config",
   "main": "index.js",
   "author": "jamiemagique",
